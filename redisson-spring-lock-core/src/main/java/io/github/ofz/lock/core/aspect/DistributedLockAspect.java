@@ -1,7 +1,7 @@
-package com.github.ofz.lock.core.aspect;
+package io.github.ofz.lock.core.aspect;
 
-import com.github.ofz.lock.core.annotation.DistributedLock;
-import com.github.ofz.lock.core.key.LockKeyParser;
+import io.github.ofz.lock.core.annotation.DistributedLock;
+import io.github.ofz.lock.core.key.LockKeyParser;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;

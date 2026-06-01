@@ -34,7 +34,7 @@ redisson-spring-lock
 
 ```xml
 <dependency>
-    <groupId>com.github.ofz</groupId>
+    <groupId>io.github.ofz</groupId>
     <artifactId>redisson-spring-lock-starter</artifactId>
     <version>1.0.0</version>
 </dependency>

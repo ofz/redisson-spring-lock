@@ -1,4 +1,4 @@
-package com.github.ofz.lock.core.annotation;
+package io.github.ofz.lock.core.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,6 +1,6 @@
-package com.github.ofz.lock.springboot.demo.controller;
+package io.github.ofz.lock.springboot.demo.controller;
 
-import com.github.ofz.lock.springboot.demo.service.OrderService;
+import io.github.ofz.lock.springboot.demo.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

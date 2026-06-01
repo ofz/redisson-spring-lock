@@ -1,6 +1,6 @@
-package com.github.ofz.lock.springboot.demo.service;
+package io.github.ofz.lock.springboot.demo.service;
 
-import com.github.ofz.lock.core.annotation.DistributedLock;
+import io.github.ofz.lock.core.annotation.DistributedLock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

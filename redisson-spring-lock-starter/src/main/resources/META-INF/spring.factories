@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.github.ofz.lock.starter.RedissonLockAutoConfiguration
+io.github.ofz.lock.starter.RedissonLockAutoConfiguration

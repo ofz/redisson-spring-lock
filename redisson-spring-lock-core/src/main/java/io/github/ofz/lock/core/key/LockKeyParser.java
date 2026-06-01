@@ -1,4 +1,4 @@
-package com.github.ofz.lock.core.key;
+package io.github.ofz.lock.core.key;
 
 import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.ParameterNameDiscoverer;

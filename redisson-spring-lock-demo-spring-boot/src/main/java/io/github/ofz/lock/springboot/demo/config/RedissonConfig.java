@@ -1,4 +1,4 @@
-package com.github.ofz.lock.springboot.demo.config;
+package io.github.ofz.lock.springboot.demo.config;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
