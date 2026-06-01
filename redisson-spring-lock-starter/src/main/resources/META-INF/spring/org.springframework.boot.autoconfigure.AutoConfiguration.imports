@@ -1,1 +1,1 @@
-io.github.ofz.lock.starter.RedissonLockAutoConfiguration
+com.github.ofz.lock.starter.RedissonLockAutoConfiguration
