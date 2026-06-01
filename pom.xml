@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.ofz</groupId>
+    <artifactId>redisson-spring-lock</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <name>Redisson Spring Lock</name>
+    <description>Annotation-based distributed lock for Spring Boot (2.x &amp; 3.x)</description>
+
+    <modules>
+        <module>redisson-spring-lock-core</module>
+        <module>redisson-spring-lock-starter</module>
+        <module>redisson-spring-lock-demo-spring-boot</module>
+    </modules>
+
+    <properties>
+        <revision>1.0.0</revision>
+        <java.version>8</java.version>
+        <spring.boot.version>2.7.18</spring.boot.version>
+        <redisson.version>3.28.0</redisson.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
