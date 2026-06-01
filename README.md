@@ -19,7 +19,18 @@ redisson-spring-lock
 
 ## 快速开始 / Quick Start
 
-### 1. 添加依赖 / Add Dependency
+### 1. 添加JitPack仓库 / Add Repository
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+### 2. 添加依赖 / Add Dependency
 
 ```xml
 <dependency>
@@ -29,7 +40,7 @@ redisson-spring-lock
 </dependency>
 ```
 
-### 2. 配置 RedissonClient / Configure RedissonClient
+### 3. 配置 RedissonClient / Configure RedissonClient
 
 在你的 Spring 配置类中注册 `RedissonClient` Bean：
 
@@ -50,7 +61,7 @@ public class RedissonConfig {
 }
 ```
 
-### 3. 使用注解 / Use the Annotation
+### 4. 使用注解 / Use the Annotation
 
 在需要加分布式锁的方法上添加 `@DistributedLock`，`key` 支持 Spring EL 表达式：
 
