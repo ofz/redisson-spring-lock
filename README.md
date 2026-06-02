@@ -11,8 +11,7 @@ Annotation-based distributed lock for Spring Boot (2.x & 3.x), powered by Rediss
 ```
 redisson-spring-lock
 ├── redisson-spring-lock-core      # 核心实现 / Core implementation
-├── redisson-spring-lock-starter   # Spring Boot 自动装配 / Spring Boot auto-configuration
-└── redisson-spring-lock-demo-spring-boot  # 示例工程 / Demo project
+└── redisson-spring-lock-starter   # Spring Boot 自动装配 / Spring Boot auto-configuration
 ```
 
 ---
