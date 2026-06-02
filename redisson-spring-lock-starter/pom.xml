@@ -3,17 +3,35 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.github.ofz</groupId>
-        <artifactId>redisson-spring-lock</artifactId>
-        <version>${revision}</version>
-        <relativePath>../pom.xml</relativePath>
+        <artifactId>redisson-spring-lock-parent</artifactId>
+        <version>1.0.0</version>
     </parent>
-
+    <groupId>io.github.ofz</groupId>
+    <version>1.0.0</version>
     <artifactId>redisson-spring-lock-starter</artifactId>
     <packaging>jar</packaging>
 
     <name>redisson-spring-lock-starter</name>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/ofz/redisson-spring-lock/redisson-spring-lock-starter</url>
+    <description>The starter of redisson spring lock project</description>
 
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>ofz</name>
+            <email>405691754@qq.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <url>https://github.com/ofz/redisson-spring-lock</url>
+        <connection>scm:git:https://github.com/ofz/redisson-spring-lock.git</connection>
+        <developerConnection>scm:git:git@github.com:ofz/redisson-spring-lock.git</developerConnection>
+    </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -22,13 +40,83 @@
         <dependency>
             <groupId>io.github.ofz</groupId>
             <artifactId>redisson-spring-lock-core</artifactId>
-            <version>${revision}</version>
+            <version>1.0.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
             <optional>true</optional>
+            <version>2.7.18</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+
+            <!-- 源码 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals><goal>jar-no-fork</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- javadoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <configuration>
+                    <doclint>none</doclint>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals><goal>jar</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- GPG -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals><goal>sign</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Central 发布 -->
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.5.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

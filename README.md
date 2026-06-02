@@ -19,7 +19,17 @@ redisson-spring-lock
 
 ## 快速开始 / Quick Start
 
-### 1. 配置 RedissonClient / Configure RedissonClient
+### 1. 添加依赖 / Add Dependency
+
+```xml
+<dependency>
+    <groupId>io.github.ofz</groupId>
+    <artifactId>redisson-spring-lock-starter</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### 2. 配置 RedissonClient / Configure RedissonClient
 
 在你的 Spring 配置类中注册 `RedissonClient` Bean：
 
@@ -40,7 +50,7 @@ public class RedissonConfig {
 }
 ```
 
-### 2. 使用注解 / Use the Annotation
+### 3. 使用注解 / Use the Annotation
 
 在需要加分布式锁的方法上添加 `@DistributedLock`，`key` 支持 Spring EL 表达式：
 

@@ -3,24 +3,38 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.ofz</groupId>
-    <artifactId>redisson-spring-lock</artifactId>
-    <version>${revision}</version>
+    <artifactId>redisson-spring-lock-parent</artifactId>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <name>Redisson Spring Lock</name>
     <description>Annotation-based distributed lock for Spring Boot (2.x &amp; 3.x)</description>
-
+    <url>https://github.com/ofz/redisson-spring-lock</url>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>ofz</name>
+            <email>405691754@qq.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <url>https://github.com/ofz/redisson-spring-lock</url>
+        <connection>scm:git:https://github.com/ofz/redisson-spring-lock.git</connection>
+        <developerConnection>scm:git:git@github.com:ofz/redisson-spring-lock.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <modules>
         <module>redisson-spring-lock-core</module>
         <module>redisson-spring-lock-starter</module>
-        <module>redisson-spring-lock-demo-spring-boot</module>
     </modules>
 
     <properties>
-        <revision>1.0.0</revision>
         <java.version>8</java.version>
-        <spring.boot.version>2.7.18</spring.boot.version>
-        <redisson.version>3.28.0</redisson.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -29,7 +43,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
+                <version>2.7.18</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -39,11 +53,9 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <artifactId>maven-deploy-plugin</artifactId>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>
